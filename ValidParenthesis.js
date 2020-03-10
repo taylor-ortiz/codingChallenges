@@ -1,9 +1,9 @@
 function validParentheses(parens){
-    let stack = [];
-    let map = {'(': ')'}
+    let parenArr = [];
+    let parenObj = {'(': ')'}
     for (let i = 0; i < parens.length; i++) {
         if (parens[i] === '(') {
-            stack.push(parens[i]);
+            parenArr.push(parens[i]);
         }
         else {
             let last = stack.pop(); 
