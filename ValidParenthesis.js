@@ -6,10 +6,14 @@ function validParentheses(parens){
             parenArr.push(parens[i]);
         }
         else {
-            let last = stack.pop(); 
-            if (parens[i] !== map[last]) {return false};
+            let last = parenArr.pop(); 
+            if (parens[i] !== parenObj[last]) {
+              return false
+            }
         }
     }
-    if (stack.length !== 0) {return false};
+    if (parenArr.length !== 0) {
+      return false
+    }
     return true;
 }
